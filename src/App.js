@@ -74,9 +74,10 @@ function App() {
   return (
     <div className="container container-flex p-4 m-5 text-center">
       <h3>Ether Wallet Smart Dapp</h3>
+      <h5>Contract Deployed by(Owner): { contOwner }</h5>
       <h5>ETHer Wallet Smart Contract Address: {etherWalletAddress}</h5>
       <h5>ETHer Wallet Smart Contract Balance: {balanceFetchError ? 0 : scBalance}</h5>
-      
+      {balanceFetchError ? <>balanceFetchError.message</> : null}
       <Card>
         <Card.Body className="mx-auto"><ConnectButton /></Card.Body>
       </Card>
